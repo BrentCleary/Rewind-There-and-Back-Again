@@ -43,10 +43,10 @@
                       <a class="nav-link" href="code.html">The Code</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                    <a class="nav-link" target="_blank" href="https://github.com/BrentCleary/Rewind-There-and-Back-Again">Git Repo</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" target="_blank" href="#">About</a>
+                      <a class="nav-link" target="_blank" href="https://brentcleary-portfolio.netlify.app/">About</a>
                   </li>
               </ul>
           </div>
@@ -72,7 +72,7 @@
               <input id="userString" type="text" class="form-control" placeholder="Enter a string..." aria-label="Enter A String">
             </div>
             <div class="col-12">
-              <button type="button" class="btn btn-danger">Reverse</button>
+              <button type="button" id="btnSubmit" class="btn btn-danger">Reverse</button>
             </div>
             <div class="alert alert-danger mt-5 invisible fade show" id="alert" role="alert">
               <h4 class="alert-heading">Well Done</h4>
@@ -117,6 +117,10 @@
 
   <!-- JS Script -->
   <script src="js/site.js"></script>
+
+  <script>
+    document.getElementById("btnSubmit").addEventListener("click", getValue);
+  </script>
 
 </body>
 

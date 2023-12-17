@@ -3,7 +3,7 @@
 function getValue()
 {
 
-  document.getElementById("#alert").classList.add("invisible");
+  document.getElementById("alert").classList.add("invisible");
 
   let userString = document.getElementById("userString").value;
 

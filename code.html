@@ -44,10 +44,10 @@
                       <a class="nav-link active" aria-current="page" href="code.html">The Code</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                    <a class="nav-link" target="_blank" href="https://github.com/BrentCleary/Rewind-There-and-Back-Again">Git Repo</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" target="_blank" href="#">About</a>
+                      <a class="nav-link" target="_blank" href="https://brentcleary-portfolio.netlify.app/">About</a>
                   </li>
               </ul>
           </div>
@@ -61,17 +61,58 @@
       <div class="row row-cols-1 row-cols-lg-2">
         <div class="col-lg-8">
           <pre class="line-numbers"><code class="language-javascript">
-            // Call Hello World
-            function helloWorld(){
-              alert("Hello World");
+            // Get the string from the document
+            // controller function
+            function getValue()
+            {
+            
+              document.getElementById("alert").classList.add("invisible");
+            
+              let userString = document.getElementById("userString").value;
+            
+              let revString = reverseString(userString);
+            
+              displayString(revString);
+            
+            }
+            
+            
+            // Reverse it
+            // logic function
+            function reverseString(userString)
+            {
+            
+              let revString = [];
+            
+              // reverse a string using a for-loop
+              for (let i = userString.length-1; i >= 0; i--) {
+                
+                revString += userString[i];
+                
+              }
+            
+              return revString;
+            
+            }
+            
+            
+            // Return the reversed string to the user in results
+            // view function
+            function displayString(revString)
+            {
+              // Write to the page
+              document.getElementById("msg").innerHTML = `Your string reversed is: ${revString}`;
+            
+              // Show the alert box
+              document.getElementById("alert").classList.remove("invisible");
+            
             }
           </code>
           </pre>
         </div>
         <div class="col-lg-4">
-          <p>The Code is Structured in One Function</p>
-          <h5>Hello World</h5>
-          <p>Hello World is a function that displays an alert with a message of "Hello World"</p>
+          <h5>REWIND</h5>
+          <p>The code takes in the user input and locates it through it's id. The inputted string is then looped over in reverse, and it's elements are added to a new revString variable. The variable is then return in the display window, which is set to visible by removing the "invisibile" class element from the display.</p>
         </div>
       </div>
     </div>
